@@ -1,0 +1,62 @@
+body {
+    text-align: center;
+}
+
+#start {
+    margin-top: -10px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+}
+
+#timerBox {
+    font-size: 30px;
+    border-bottom-style: solid;
+    border-width: 2px;
+    background-color:lightcoral;
+    margin-right: 400px;
+    margin-left: 400px;
+}
+
+#timer {
+    background-color: yellow;
+}
+
+#reset {
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.navbar {
+    display: flex;
+    font-size: 30px;
+    background-color: grey;
+    border-bottom-style: solid;
+    border-width: 2px;
+}
+
+#questions {
+    font-size: 20px;
+    border-bottom-style: solid;
+    border-width: 2px;
+    background-color:lightgreen;
+    margin-right: 400px;
+    margin-left: 400px;
+}
+
+#triviaTitle {
+    font-size: 50px;
+    border-bottom-style: solid;
+    border-width: 2px;
+    margin-right: 400px;
+    margin-left: 400px;
+}
+
+#submit {
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+}

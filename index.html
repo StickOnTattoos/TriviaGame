@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tyler's Trivia Game</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    
+
+</head>
+<style>
+    body {
+        text-align: center;
+        background-image: url(assets/images/pipes.png)
+    }
+</style>
+
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://stickontattoos.github.io/Responsive-Portfolio/">Home</a>
+    </nav>
+    <h1 id="triviaTitle">Trivia Game</h1>
+    <div id="intro">
+        <button id="start">START</button>
+    </div>
+
+    <div id="trivia" class="hidden">
+        <h3 id="timerBox">Time: <span id="timer"></span> seconds</h3>
+        <div id="questions"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <input type="submit" id="submit">
+    <button id="reset">Reset</button>
+
+</body>
+
+</html>
+
+
+
+<!-- <form action="">
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+        <input type="radio" name="gender" value="other"> Other
+      </form> -->
