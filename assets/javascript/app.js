@@ -1,4 +1,4 @@
-var time = 120;
+var time = 100;
 var timeInterval;
 var questions = [
     {
@@ -39,15 +39,9 @@ renderQuestions();
 $("#start").on("click", function () {
     $("#intro").addClass("hidden");
     $("#trivia").removeClass("hidden");
-
-    timeInterval = setInterval(function () {
-        time--;
-        if (time === 0) {
-            clearInterval(timeInterval);
-            checkTrivia();
-        }
-        $("#timer").text(time);
-    }, 1000);
+    $("#submit").removeClass("hidden");
+    $("#reset").removeClass("hidden");
+    startTimer();
 });
 
 function renderQuestions() {
@@ -74,13 +68,40 @@ function checkTrivia() {
     var $forms = $("form");
     $forms.each(function (i, elem) {
         $(elem).find("input:checked").each(function (i, elem) {
+           var name = $(this).attr("name");
             console.log(elem);
         });
     })
 }
 
-$("#reset").on("click", function () {
-    console.log("hello")
-    time = 120;
-})
+function startTimer() {
+    timeInterval = setInterval(function () {
+        time--;
+        if (time === 0) {
+            stopTimer();
+            checkTrivia();
+        }
+        $("#timer").text(time);
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timeInterval);
+}
+
+$(".btn").on("click", function () {
+    
+    if (this.id === "submit") {
+        console.log("submit");
+        stopTimer();
+        checkTrivia();
+
+    }
+    else {
+        console.log("reset");
+        time = 120;
+        $("input[type=\"radio\"]").prop("checked", false);
+        startTimer();
+    }
+});
 
